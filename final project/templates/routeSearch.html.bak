@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>线路规划系统</title>
+  <link rel="stylesheet" href="../css/main.css">
+ </head>
+ <body>
+  <div class="banner">
+	<div class="header">
+		 <div class="container">
+			 <div class="logo">
+				 <h1><a>地铁路线规划系统</a></h1>
+			 </div>
+		 </div>
+	 </div>
+	 <div class="top-menu">
+		 <div class="container">
+			 <nav class="cl-effect-1">
+			 <ul>
+				 <li><a class="scroll" href="lineSearch.html">线路搜索</a></li>
+				 <li><a class="scroll" href="stationSearch.html">站点搜索</a></li>
+				 <li><a class="scroll" href="stationInfo.html">站点情况</a></li>
+				 <li><a class="scroll" href="../index.html">返回首页</a></li>
+			 </ul>
+			 </nav>
+		 </div>
+	 </div>
+	 <div class="banner-form">
+		 <div class="container">
+			 <p>请在下面输入您的出发站，终点站和乘车时间，乘车时间以“小时:分钟”表示</p><br>
+			 <form action="/routeSearch" method="post">
+				<input type="text" name="startStation" placeholder="出发站">
+				<input type="text" name="endStation" placeholder="终点站">
+				<input type="text" name="timeNow" placeholder="乘车时间">
+				<input type="submit" value="提交">
+			</form><br>
+			<p>{{searchInfo|safe}}</p>
+		 </div>
+	 </div>
+</div>
+ </body>
+</html>

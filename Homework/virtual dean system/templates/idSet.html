@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>录入教师与学生信息</title>
+ </head>
+ <body>
+  <h1>教师、学生信息录入系统</h1>
+  <p>请注意，录入时将自动分配密码666666，身份栏中教师请填1，学生请填2</p>
+  <form action="/idSet" method="post">
+	<a>用户ID</a><input type=text name="newID"><br>
+	<a>身份</a><input type=text name="newJob"><br><br>
+	<input type=submit value="提交" />
+  </form>
+  <p>{{setInfo}}</p>
+  <a href="../dean.html">返回</a><br>
+ </body>
+</html>

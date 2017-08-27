@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>主要城市天气情况</title>
+  <script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript"> 
+	function myrefresh() 
+	{ 
+		window.location.reload(); 
+	} 
+	setTimeout('myrefresh()',3600000); //指定1小时刷新一次 
+  </script> 
+ </head>
+ <body>
+  <a>请等待数据载入，这可能要花费一分钟左右的时间</a>
+  <script type="text/javascript">
+   $.get("/temp",function(data){
+	   $("a").html(data);
+   });
+   </script>
+ </body>
+</html>

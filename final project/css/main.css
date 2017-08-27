@@ -1,0 +1,96 @@
+body{
+  font-family: "Microsoft YaHei";
+  padding:0 0;
+  margin:0 0; 
+}
+ul{
+	padding:0 0;
+	margin:0 0;	
+}
+.banner{
+	background-image:url(../img/bg-01.jpg);
+    background-size:cover;
+	min-height:800px;
+}
+.top-menu{
+	text-align:center;
+	padding:2em 0;
+}
+.top-menu ul li{
+	display:inline-block;
+}
+.top-menu ul li a{
+	display:block;
+	color:#fff;
+	font-size:1.25em;
+	padding:0 1em;
+	text-decoration:none;
+}
+.top-menu li a:hover {
+    color: #3DED61;
+}
+h1{
+	padding:0 0;
+	margin:0 0;
+}
+.header{
+	background:#000;
+	padding:2em 0;
+	text-align:center;
+}
+.logo h1 a{
+	color:#5ACC42;
+	font-size:1.3em;
+	display:inline-block;
+	text-decoration:none;
+}
+p{
+	padding:0 0;
+	margin:0 0;
+}
+.banner-form{
+	text-align:center;
+	margin-top:12em;
+}
+.banner-form p{
+	color:#FFF;
+	font-size:1.2em;
+}
+.banner-form form {
+margin-top:1em;
+}
+.banner-form form [type="text"]:nth-child(1){
+	margin-right:2%;
+}
+.banner-form form [type="text"] {
+  outline: none;
+  background: none;
+  color: #FFF;
+  width: 30%;
+  padding: 10px;
+  border: none;
+  border-bottom:1px solid rgba(181, 181, 181, 0.59);
+  font-size: 1em;
+  font-weight: 100;
+  margin-bottom: 1em;
+}
+.banner-form form input[type="submit"] {
+  font-size: 1em;
+  color: #fff;
+  outline: none;
+  padding: 7px 2em;
+  background: #5ACC42;
+  border: 1px solid #5ACC42;
+  transition: 0.5s all;
+  border-radius: 2px;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+  margin-left:1em;
+}
+.banner-form form input[type="submit"]:hover {
+  border: 1px solid #5ACC42;
+  background: transparent;
+  color: #5ACC42;
+}

@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>输入单词信息</title>
+  <script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
+ </head>
+ <body>
+  <p>请在这里输入单词的英文与中文含义</p>
+  <form action="/InputWord" method="post">
+	<a>英文单词</a><input type=text name="engWord"></br>
+	<a>中文释义</a><input type=text name="chnWord"></br>
+	<input type=submit value="提交" />
+  </form>
+  <p>{{submitInfo}}</p>
+ </body>
+</html>

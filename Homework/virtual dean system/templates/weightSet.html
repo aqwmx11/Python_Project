@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>权重设置</title>
+ </head>
+ <body>
+  <h1>欢迎来到分数权重设置页面</h1>
+  <p>首次录入成绩时需要设置平时成绩、期中成绩和期末成绩的占比</p>
+  <p>在下面的对话框中，输入平时成绩，期中成绩，期末成绩的占比</p>
+  <p>格式要求：必须为整数，且三者之和为100</p>
+   <form action="/weightSet" method="post">
+	<a>平时成绩占比</a><input type=text name="dailyptg"><br>
+	<a>期中成绩占比</a><input type=text name="midptg"><br>
+	<a>期末成绩占比</a><input type=text name="finalptg"><br><br>
+	<input type=submit value="提交" />
+  </form>
+  <p>{{setInfo}}</p>
+  <a href="../teacher.html">返回</a><br>
+ </body>
+</html>

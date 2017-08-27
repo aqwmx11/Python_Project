@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>录入课程信息</title>
+ </head>
+ <body>
+  <h1>课程信息录入系统</h1>
+  <form action="/courseSet" method="post">
+	<a>课程ID</a><input type=text name="newcourseid"><br>
+	<a>课程名</a><input type=text name="newcoursename"><br><br>
+	<input type=submit value="提交" />
+  </form>
+  <p>{{setInfo}}</p>
+  <a href="../dean.html">返回</a><br>
+ </body>
+</html>

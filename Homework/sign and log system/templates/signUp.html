@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>注册</title>
+  <script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
+ </head>
+ <body>
+  <p>如果你是一个新用户，请在下面的表格中填入信息注册</p>
+  <form action="/signup" method="post">
+	<a>用户名称</a><input type=text name="newusername"/></br>
+	<a>用户密码</a><input type=text name="newpassword"/></br>
+	<a>重复密码</a><input type=text name="newpassword2"/></br>
+	<input type=submit value="提交"/>
+  </form>
+  <p>{{signUpInfo}}</p>
+ </body>
+</html>

@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>修改密码</title>
+  <script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
+ </head>
+ <body>
+  <p>首次登陆请修改密码，要求长度为8-20位，并包含数字、小写字母和大写字母</p>
+  <form action="/pwdSet" method="post">
+	<a>用户密码</a><input type=text name="newpassword"/></br>
+	<a>重复密码</a><input type=text name="newpassword2"/></br>
+	<input type=submit value="提交"/>
+  </form>
+  <p>{{signUpInfo}}</p>
+ </body>
+</html>
