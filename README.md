@@ -1,1 +1,4 @@
 # Python_Project
+Hi, this is the repository for my Python projects. Now they all came from my course "Practical Python Design" in Peking University. They are some very cool projects! Many of them presents in a website using the Flask library in Python. For example, a Chinese-English match game website, a weather crawler website (which gather information from a famous weather website in fixed frequency), even a virtual dean system which implements many functions for deans, professors and students!
+The final project is even cooler. It grabs data from Beijing Subway Station website and create a website which can plan interchange strategy for passengers at any time! Oh, you have to know that Beijing has a complicated subway system and you might take more than 3 different subways to arrive at your destination:(
+Please feel free to skim through and comment on anything. Thank you:)
