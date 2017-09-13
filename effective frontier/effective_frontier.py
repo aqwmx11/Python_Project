@@ -27,7 +27,7 @@ with open('Industry8_data_original.csv','r') as f:
 	#create the return vector
 	tempList=[]
 	for i in range(0,8):
-		tempList.append(np.mean(dataMatrix[i])*12+0.01)
+		tempList.append(np.average(dataMatrix[i])*12)
 	muMatrix=np.mat(tempList).T
 	
 	#create the variance matrix
@@ -39,10 +39,10 @@ with open('Industry8_data_original.csv','r') as f:
 	oneMatrix=np.mat([[1],[1],[1],[1],[1],[1],[1],[1]])
 	#calculate the transpose of it to save time
 	troneMatrix=oneMatrix.T
-	
+
 	#create the omega1 and omegaR matrix
-	omega1=invarMatrix*muMatrix/float(troneMatrix*invarMatrix*muMatrix)
-	omegaR=invarMatrix*oneMatrix/float(troneMatrix*invarMatrix*oneMatrix)
+	omegaR=invarMatrix*muMatrix/float(troneMatrix*invarMatrix*muMatrix)
+	omega1=invarMatrix*oneMatrix/float(troneMatrix*invarMatrix*oneMatrix)
 
 	#calculate the mean of omega1 and omegaR
 	mu1=float(omega1.T*muMatrix)
@@ -55,16 +55,16 @@ with open('Industry8_data_original.csv','r') as f:
 	bestOmega=np.mat([[0],[0],[0],[0],[0],[0],[0],[1]])
 	bestMu=0
 
-	for i in range(1,501):
-		mu=0+float(i)/1000
+	for i in range(1,20001):
+		mu=0+float(i)/10000
 		muList.append(mu)
 		alpha=(mu-mu1)/(muR-mu1)
 		omegaStar=alpha*omegaR+(1-alpha)*omega1
-		varStar=float(0.5*omegaStar.T*varMatrix*omegaStar)
+		varStar=float(omegaStar.T*varMatrix*omegaStar)
 		stdStar=np.sqrt(varStar)
 		stdList.append(stdStar)
 
-		sharpeStar=(mu-0.01)/stdStar
+		sharpeStar=mu/stdStar
 		if sharpeStar>bestSharpe:
 			bestSharpe=sharpeStar
 			bestOmega=omegaStar
@@ -82,6 +82,5 @@ with open('Industry8_data_original.csv','r') as f:
 
 	print(bestSharpe)
 	print(bestOmega)
-	
 
 
