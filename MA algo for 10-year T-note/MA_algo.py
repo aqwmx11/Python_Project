@@ -4,6 +4,8 @@
 
 import csv
 import numpy as np
+import matplotlib.pyplot as plt
+import datetime
 
 #Trading signal generator
 #Input: shortList: short MA; longList: long MA
@@ -90,13 +92,17 @@ with open('10Y_T_Note.csv','r') as f:
 
 	#We only care about the date and the price column
 	i=0
+	dateList=[]
 	priceList=[]
 	for row in content:
 		if i>=1 and i<=1993:
+			tempDate=datetime.datetime.strptime(row[0],'%Y/%m/%d')
+			dateList.append(tempDate)
 			priceList.append(float(row[1]))
 		i+=1
 	
 	#Now, we need to reverse the lists to make them order as time passes
+	dateList.reverse()
 	priceList.reverse()
 
 	#Now, construct the moving average for 30 days
@@ -121,6 +127,7 @@ with open('10Y_T_Note.csv','r') as f:
 	#In order for me not to make mistake in the future, 
 	#I will delete all price data which have no moving average available
 	priceList=priceList[29:]
+	dateList=dateList[29:]
 	
 	#Generate all the trading signal
 	(buy5_10,sell5_10)=signalGenerator(ma5,ma10)
@@ -138,3 +145,8 @@ with open('10Y_T_Note.csv','r') as f:
 	#We find that only value5_10 is making money!
 	#Check the performance of 5 - 10 MA algo
 	performance(value5_10)
+	
+	#plot the value to compare our strategy to one who always hold one share
+	plt.plot(dateList,value5_10)
+	plt.plot(dateList,priceList)
+	plt.show()
